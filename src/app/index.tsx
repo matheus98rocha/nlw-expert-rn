@@ -1,6 +1,6 @@
-import CategoryButton from "@/components/category-button";
+import CategoryButton from "@/components/category-button/category-button";
 import { CATEGORIES } from "@/utils/data/products";
-import Header from "@/components/header";
+import Header from "@/components/header/header";
 import { View, FlatList } from "react-native";
 import { useCallback, useState } from "react";
 

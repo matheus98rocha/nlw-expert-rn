@@ -1,11 +1,7 @@
 import React from "react";
 import { Pressable, Text, PressableProps } from "react-native";
 import { clsx } from "clsx";
-
-interface CategoryProps extends PressableProps {
-  title: string;
-  isSelected?: boolean;
-}
+import { CategoryProps } from "./category-button.types";
 
 function CategoryButton({ title, isSelected, ...rest }: CategoryProps) {
   return (

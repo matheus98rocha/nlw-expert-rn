@@ -2,11 +2,7 @@ import React from "react";
 import { Image, Text, View, TouchableOpacity } from "react-native";
 import { Feather } from "@expo/vector-icons";
 import colors from "tailwindcss/colors";
-
-interface HeaderProps {
-  title: string;
-  cartQuantityItems?: number;
-}
+import { HeaderProps } from "./header.types";
 
 function Header({ title, cartQuantityItems = 0 }: HeaderProps) {
   return (

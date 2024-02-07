@@ -1,6 +1,6 @@
 import { Slot } from "expo-router";
 import { SafeAreaView } from "react-native";
-import { Loading } from "@/components/loading";
+import { Loading } from "@/components/loading/loading";
 
 import {
   Inter_400Regular,

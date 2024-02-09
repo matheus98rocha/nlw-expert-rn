@@ -13,9 +13,14 @@ export const Product = forwardRef<TouchableOpacity, ProductProps>(
         <Image source={data.thumbnail} className="w-20 h-20 rounded-md" />
 
         <View className="flex-1 ml-3">
-          <Text className="text-slate-100 font-subtitle text-base flex-1">
-            {data.title}
-          </Text>
+          <View className="flex-row items-center">
+            <Text className="text-slate-100 font-subtitle text-base flex-1">
+              {data.title}
+            </Text>
+            <Text className="text-slate-400 font-subtitle text-sm">
+              {data.quantity && "x " + data.quantity}
+            </Text>
+          </View>
           <Text className="text-slate-400 text-sx leading-5 mt-0.5">
             {data.description}
           </Text>

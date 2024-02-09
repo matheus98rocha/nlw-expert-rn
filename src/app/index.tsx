@@ -1,7 +1,7 @@
 import { View, FlatList, SectionList, Text } from "react-native";
 import { useCallback, useState, useRef, useMemo } from "react";
 import CategoryButton from "@/components/category-button/category-button";
-import { CATEGORIES, MENU } from "@/utils/data/products";
+import { CATEGORIES, MENU, ProductProps } from "@/utils/data/products";
 import Header from "@/components/header/header";
 import { Link } from "expo-router";
 import { Product } from "@/components/product/product";
@@ -9,7 +9,7 @@ import { useCartStore } from "@/stores/cart-store";
 
 export default function Home() {
   const [category, setCategory] = useState<string>(CATEGORIES[0]);
-  const sectionListRef = useRef<SectionList>(null);
+  const sectionListRef = useRef<SectionList<ProductProps>>(null);
   const cartStore = useCartStore();
 
   const cartQuantityItems = useMemo(() => {
@@ -35,6 +35,7 @@ export default function Home() {
       });
     }
   }, []);
+
   return (
     <View className="flex-1 pt-8">
       <Header title="Faça o seu pedido" cartQuantityItems={cartQuantityItems} />
